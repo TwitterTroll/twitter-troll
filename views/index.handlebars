@@ -1,0 +1,147 @@
+
+
+ <div class="jumbotron">
+{{!-- <div class="container bg"> --}}
+  
+  <div class="row">
+      <div class="center col-sm-12">
+          <h1>Twitter Trolls App</h1>
+          <p></p>
+      </div>
+    </div>
+  <!-- end .row -->
+  <img src=>
+  <div class="row" id="eatenBurger">
+      <div class="col-sm-6">
+
+      <br>
+      <h2> Tweets</h2>
+
+      <ul>
+        {{tweets}}
+          {{#unless this.devoured}}
+            <li>
+              {{this.id}}
+              {{this.screen_name}} 
+               
+               <form method="POST" action="/{{this.id}}?_method=PUT">
+              <form action="/{{this.id}}" method="POST"> 
+                 <input type="hidden" name="devoured" value="1">
+                <button class="btn btn-primary btn-sm change-eat" data-id="{{this.id}}" type="submit">Devour It!</button>
+              </form> 
+
+            </li>
+          {{/unless}}
+      {{!--   {{/each}}  --}}
+      </ul>
+
+      </div>
+
+      <div class="col-sm-6" id="selectedBurger">
+
+      <h3>Tweets posted!</h3>
+      
+        {{tweets}}
+          {{#if this.devoured}}
+            <li>
+              {{this.id}}
+              {{this.screen_name}}
+
+            </li>
+          {{/if}}
+      {{!--   {{/each}} --}}
+      
+      </div>
+
+    </div>
+  <!-- end .row -->
+
+  <div class="row">
+      <div class="center col-sm-12">
+
+      <div class="add-burger"<h2>Add A Tweet!</h2></div>
+
+      <form class="create-update-form" action="/" method="POST">
+
+        <div class="form-group">
+          <p>Enter a tweet and click the Submit Order button.</p>
+          <input type="text" id="ca" name="screen_name">
+        </div>
+        
+        <button class="btn-primary" type="submit">Submit Tweet</button>
+      </form>
+
+      </div>
+  
+    </div>
+  <!-- end .row -->
+
+  <script type="text/javascript" src="../../public/assets/js/test.js">
+  src= 
+  </script>
+
+<!--<script type="text/javascript">
+// // Make sure we wait to attach our handlers until the DOM is fully loaded.
+// $(function() {
+//   $(".change-eat").on("click", function(event) {
+//     var id = $(this).data("id");
+//     var newEat = $(this).data("newEat");
+
+//     var newEatState = {
+//       devoured: 1
+//     };
+
+//     // Send the PUT request.
+//     $.ajax("/api/tweets/" + id, {
+//       type: "PUT",
+//       //data: newEatState
+//     }).then(
+//       function() {
+//         console.log("changed eat to", newEat);
+//         // Reload the page to get the updated list
+//         location.reload();
+//       }
+//     );
+//   });
+
+//   $(".create-form").on("submit", function(event) {
+//     // Make sure to preventDefault on a submit event.
+//     event.preventDefault();
+
+//     var newTweet = {
+//       screen_name: $("#ca").val().trim(),
+//       text: $("text").val().trim()
+//     };
+
+//     // Send the POST request.
+//     $.ajax("/api/tweets", {
+//       type: "POST",
+//       data: newBurger
+//     }).then(
+//       function() {
+//         console.log("created new burger");
+//         // Reload the page to get the updated list
+//         location.reload();
+//       }
+//     );
+//   });
+
+//   $(".eaten-burger").on("click", function(event) {
+//     var id = $(this).data("id");
+//     event.preventDefault();
+//     console.log(typeof id);
+//     // Send the DELETE request.
+//     $.ajax("/api/tweets/" + id, {
+//       type: "PUT",
+//     }).then(
+//       function() {
+//         console.log("deleted burger", id);
+//         // Reload the page to get the updated list
+//         location.reload();
+//       }
+//     );
+//   });
+// });
+</script>
+
+
