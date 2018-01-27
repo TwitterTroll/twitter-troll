@@ -1,7 +1,7 @@
-/*html{
+html{
         font-family: Helvetica Neue;
 }
-*/
+
 body{
     background-color: #c9ddfc;
 }
@@ -24,10 +24,10 @@ h2{
    border-radius: 2px;
 }
 
-#chat-window {
-   height: 128px;
-   overflow: auto;
-   background: rgb(249, 249, 249);
+#chat-window{
+   height: 400px;
+  /* overflow: auto;*/
+   background: #f9f9f9;
 }
 
 #output p{
