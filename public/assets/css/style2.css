@@ -1,0 +1,38 @@
+html{
+        font-family: Helvetica Neue;
+}
+
+body
+{
+  background: #546E7A;
+}
+
+h5
+{
+  font-weight: 400;
+}
+
+.container
+{
+  margin-top: 80px;
+  width: 400px;
+  height: 720px;
+}
+
+.tabs .indicator
+{
+  background-color: #e0f2f1;
+  height: 60px;
+  opacity: 0.3;
+}
+
+.form-container
+{
+  padding: 40px;
+  padding-top: 10px;
+}
+
+.confirmation-tabs-btn
+{
+  position: absolute;
+}
