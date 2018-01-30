@@ -12,11 +12,11 @@ router.get("/signin", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/signin.html"));
 });
 
-router.get("/trollfor", function(req, res) {
+router.get("/for", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/troll1.html"));
 });
 
-router.get("/trollagainst", function(req, res) {
+router.get("/against", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/troll2.html"));
 });
 
