@@ -9,7 +9,7 @@ router.get("/", function(req, res) {
 }); 
 
 router.get("/signin", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/signin.html"));
+  res.sendFile(path.join(__dirname, "../public/sign.html"));
 });
 
 router.get("/for", function(req, res) {
