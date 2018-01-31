@@ -3,11 +3,11 @@ var socket = io.connect('http://localhost:8080');
 
 // Query DOM
 var message = document.getElementById('message'),
-      handle = document.getElementById('handle'),
-      btn = document.getElementById('send'),
-      output = document.getElementById('output'),
-      feedback = document.getElementById('feedback');
-      tweet = document.getElementById('tweet');
+    handle = document.getElementById('handle'),
+    btn = document.getElementById('send'),
+    output = document.getElementById('output'),
+    feedback = document.getElementById('feedback');
+    tweet = document.getElementById('tweet');
 // Emit events
 btn.addEventListener('click', function(){
     socket.emit('chat', {
