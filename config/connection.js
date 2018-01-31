@@ -9,7 +9,7 @@ var connection;
   port: 3306,
   host: "localhost",
   user: "root",
-  password:"ghosts",
+  password:"",
   database: "tweets_db"
   });
 

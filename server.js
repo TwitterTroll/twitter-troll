@@ -18,17 +18,10 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
-//app.use(bodyParser.json({ type: }))
-// Set Handlebars.
-//var exphbs = require("express-handlebars");
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/tweets_controller.js");
-// require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+var routes = require("./controllers/html-routes.js");
+
 
 
 app.use(routes);

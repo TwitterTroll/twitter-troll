@@ -26,7 +26,7 @@ router.get("/api/twitter", function(req, res) {
         });
 
 
-Add Comment
+// Add Comment
 // var twitterAPI = require("../models/tweet.js");
 // // Create all our routes and set up logic within those routes where required.
 // router.get("/", function(req, res) {
