@@ -16,6 +16,10 @@ h2{
 /*   color: #575ed8;*/
 }
 
+#chat-container {
+    height: auto;
+}
+
 #twitterTROLL-chat{
    max-width: 100%;
    margin: 30px auto;
@@ -25,8 +29,8 @@ h2{
 }
 
 #chat-window {
-   min-height: 128px;
-   height: 300px;
+   /* min-height: 128px; */
+   height: 400px;
    overflow: auto;
    background: rgb(249, 249, 249);
 }
