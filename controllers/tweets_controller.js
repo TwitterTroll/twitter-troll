@@ -1,29 +1,36 @@
-var express = require("express");
-var router = express.Router();
-var tweet = require("../models/tweet.js");
+// var express = require("express");
+// var router = express.Router();
+// var tweet = require("../models/tweet.js");
+// var path = require("path");
+// var tweets = require("./tweets.js");
 
- var twitterAPI = require("./tweets.js");
-// Create all our routes and set up logic within those routes where required.
+//  router.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname,"../public/index.html"));
 
-router.get("/api/twitter", function(req, res) {
-   var fs = require("fs");
-    var Twitter = require('twitter');
-    var keys = require("../config/keys.js");
-    var client = new Twitter(keys);
-  var params = {screen_name: "pattersonluri", count:21};
-  // var params = {result_type: "popular"};
-    //twitter API call
-    
-    client.get('statuses/user_timeline', params, function(error, tweets, data) {
-         // var message = [];
-        
-        for (var i=1; i<tweets.length; i++){ 
-            tweet = JSON.stringify(tweets[i].text);
-            //console.log(tweet);
-           }
-           res.json(tweet);
-         })
-        });
+// });
+
+// // Create all our routes and set up logic within those routes where required.
+// router.get("/api/twitter", function(req, res) {
+//   console.log('test');
+//    var fs = require("fs");
+//     var Twitter = require('twitter');
+//     var keys = require("../config/keys.js");
+//     var client = new Twitter(keys);
+//     client.get('search/tweets', {q: 'NFL'}, function(error, tweets, response) {
+//          var message = [];
+//         // console.log('search results', tweets);
+//         var tweetResults = tweets.statuses;
+//         for (var i=1; i<tweetResults.length; i++){ 
+
+//             tweet = JSON.stringify(tweetResults[i].text);
+
+//             message.push(tweet);
+//              console.log(message);
+//            }
+//            res.json(message);
+//          })
+//         });
+  
 
 
 // Add Comment
