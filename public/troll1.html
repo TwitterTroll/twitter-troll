@@ -33,7 +33,11 @@
       <div class="col s12 m4 l8">
         <div class="card small blue-grey darken-1">
            <div class="card-content white-text">
-                  <p>Pass Tweet in here</p>
+                <div id="tweet">
+                       
+                <h2><div id="tweet"></div></h2>
+                           
+                </div>
             </div>
         </div>
       </div>
@@ -52,8 +56,8 @@
                            <div id=“output”></div>
                            <div id=“feedback”></div>
                        </div>
-                       <input id=“handle” type=“text” placeholder=“Handle” />
-                       <input id=“message” type=“text” placeholder=“Message” />
+                       <input id="handle" type="text" placeholder="Screen Name" />
+                       <input id="message" type="text" placeholder="Enter Chat Message Here" />
                        <button id=“send”>Send</button>
                     </div>
                   </div>
@@ -63,4 +67,25 @@
      </div>
 </body>
 <script src="/assets/chat.js"></script>
+<script type="text/javascript">
+$('#button2').on("click",function() {
+  console.log('working');
+  var tweets = $('#tweet');
+  tweets.empty();
+  count++;
+  tweets.append('<div>' + tweetData[count] +'</div>');
+});
+var tweetData;
+var count = 0;
+
+    $.ajax({
+url: "api/twitter",
+method: "GET"
+}).done(function(data){
+  tweetData = data;
+  console.log(tweetData);
+  var tweets = $('#tweet');
+  tweets.append('<div>' + tweetData[count] +'</div>');
+  });
+</script>
 </html>
