@@ -8,7 +8,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <title>Twitter Troll</title>
 </head>
 <body>
@@ -105,5 +108,30 @@
     </div>
   </div>  
 </body>
-<script src="/assets/javascript/chat.js"></script>
+<script src="../assets/javascript/chat.js"></script>
+<script type="text/javascript">
+
+$('#button').on("click",function() {
+  console.log('working');
+  var tweets = $('#tweet');
+  tweets.empty();
+  count++;
+  tweets.append('<div>' + tweetData[count] +'</div>');
+});
+var tweetData;
+var count = 0;
+
+    $.ajax({
+url: "api/twitter",
+method: "GET"
+}).done(function(data){
+  tweetData = data;
+  console.log(tweetData);
+  var tweets = $('#tweet');
+  tweets.append('<div>' + tweetData[count] +'</div>');
+  });
+
+
+</script>
+
 </html>
