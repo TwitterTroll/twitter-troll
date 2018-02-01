@@ -30,7 +30,7 @@ router.get("/api/twitter", function(req, res) {
          var message = [];
         // console.log('search results', tweets);
         var tweetResults = tweets.statuses;
-        for (var i=1; i<tweetResults.length; i++){ 
+        for (var i=0; i<tweetResults.length; i++){ 
 
             tweet = JSON.stringify(tweetResults[i].text);
 

@@ -8,6 +8,11 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
   <title>Twitter Troll | Against</title>
 </head>
@@ -33,7 +38,11 @@
       <div class="col s12 m4 l8">
         <div class="card small blue-grey darken-1">
            <div class="card-content white-text">
-                  <p>Pass Tweet in here</p>
+                  <div id="tweet">
+                       
+                <h2><div id="tweet"></div></h2>
+                           
+                </div>
             </div>
         </div>
       </div>
@@ -63,4 +72,25 @@
      </div>
 </body>
 <script src="/assets/chat.js"></script>
+<script type="text/javascript">
+$('#button2').on("click",function() {
+  console.log('working');
+  var tweets = $('#tweet');
+  tweets.empty();
+  count++;
+  tweets.append('<div>' + tweetData[count] +'</div>');
+});
+var tweetData;
+var count = 0;
+
+    $.ajax({
+url: "api/twitter",
+method: "GET"
+}).done(function(data){
+  tweetData = data;
+  console.log(tweetData);
+  var tweets = $('#tweet');
+  tweets.append('<div>' + tweetData[count] +'</div>');
+  });
+</script>
 </html>
