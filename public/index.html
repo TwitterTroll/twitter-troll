@@ -110,20 +110,37 @@
 </body>
 <script src="../assets/javascript/chat.js"></script>
 <script type="text/javascript">
+ var winner = 0;
+  var vote = 0;
+
+function tweetVote() {
+  if (vote <=5 ){
+    vote++
+    console.log(vote);
+  } else {
+    winner++
+    vote=0;
+    console.log(winner);
+    newTweet();
+  }
+}
 
 $('#button1').on("click",function() {
-  console.log('working');
-  
+  console.log('vote1');
+  tweetVote(); 
+});
+
+$('#button2').on("click",function() {
+  console.log('vote2');
+  tweetVote(); 
 });
 
 function newTweet(){
-$('#button2').on("click",function() {
-  console.log('working');
+  console.log('newTweet working');
   var tweets = $('#tweet');
   tweets.empty();
   count++;
   tweets.append('<div>' + tweetData[count] +'</div>');
-  });
 };
 
 var tweetData;
