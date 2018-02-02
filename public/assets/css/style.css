@@ -30,7 +30,7 @@ h2{
 
 #chat-window {
    /* min-height: 128px; */
-   height: 400px;
+   height: 240px;
    overflow: auto;
    background: rgb(249, 249, 249);
 }
