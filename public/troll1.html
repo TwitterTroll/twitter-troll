@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -56,14 +56,16 @@
               <div class="col s12 m12">
                 <div class="card large blue-grey darken-1">
                   <div class="card-content white-text">
-                    <div id=“twitterTROLL-chat”>
-                       <div id=“chat-window”>
-                           <div id=“output”></div>
-                           <div id=“feedback”></div>
-                       </div>
-                       <input id="handle" type="text" placeholder="Screen Name" />
-                       <input id="message" type="text" placeholder="Enter Chat Message Here" />
-                       <button id=“send”>Send</button>
+                    <div id="twitterTROLL-chat">
+                    <!-- <h2>Twitter Troll Chat</h2> -->
+                    <div id="chat-window">
+                      <div id="output"></div>
+                      <div id="feedback"></div>
+                    </div>
+                    <input id="handle" type="text" placeholder="Screen Name" />
+                    <input id="message" type="text" placeholder="Enter Chat Message Here" />
+                    <button id="send">Send</button>
+                  </div>
                     </div>
                   </div>
                </div>
@@ -71,7 +73,7 @@
            </div>    
      </div>
 </body>
-<script src="/assets/chat.js"></script>
+<script src="../assets/javascript/chat.js"></script>
 <script type="text/javascript">
 $('#button2').on("click",function() {
   console.log('working');

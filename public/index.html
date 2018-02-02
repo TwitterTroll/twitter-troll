@@ -116,15 +116,21 @@ $('#button1').on("click",function() {
   
 });
 
+function newTweet(){
 $('#button2').on("click",function() {
   console.log('working');
   var tweets = $('#tweet');
   tweets.empty();
   count++;
   tweets.append('<div>' + tweetData[count] +'</div>');
-});
+  });
+};
+
 var tweetData;
 var count = 0;
+
+
+
 
     $.ajax({
 url: "api/twitter",
