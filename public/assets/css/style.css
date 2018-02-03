@@ -30,10 +30,17 @@ h2{
 
 #chat-window {
    /* min-height: 128px; */
-   height: 240px;
+   height: 400px;
    overflow: auto;
    background: rgb(249, 249, 249);
 }
+
+#chat-window-2 {
+    /* min-height: 128px; */
+    height: 300px;
+    overflow: auto;
+    background: rgb(249, 249, 249);
+ }
 
 #output p{
    padding: 14px 0px;
@@ -80,4 +87,13 @@ button{
    padding: 12px 0;
    width: 100%;
    border-radius: 0 0 2px 2px;
+}
+
+#tweet-container {
+    height:120px;
+    padding: 30px auto;
+}
+
+#tweet {
+    font-size: 20px;
 }
