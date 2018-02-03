@@ -4,6 +4,9 @@
 */
 body{
     background-color: #c9ddfc;
+    background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fwww.uidownload.com%2Ffiles%2F279%2F289%2F69%2Fdynamic-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 2000px;
 }
 
 /*body{
@@ -80,4 +83,3 @@ button{
    padding: 12px 0;
    width: 100%;
    border-radius: 0 0 2px 2px;
-}

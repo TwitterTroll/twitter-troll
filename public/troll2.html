@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 
   <title>Twitter Troll | Against</title>
 </head>
@@ -74,18 +74,7 @@
 </body>
 <script src="../assets/javascript/chat.js"></script>
 <script type="text/javascript">
-  var winner = 0;
-  var vote = 0;
-
-  if (vote <=5 ){
-    vote++
-  } else {
-    winner++
-    newTweet();
-  }
-
-  function newTweet(){
-$('#newTweet').on("click",function() {
+$('#button2').on("click",function() {
   console.log('working');
   var tweets = $('#tweet');
   tweets.empty();
@@ -94,7 +83,7 @@ $('#newTweet').on("click",function() {
 });
 var tweetData;
 var count = 0;
-}
+
     $.ajax({
 url: "api/twitter",
 method: "GET"

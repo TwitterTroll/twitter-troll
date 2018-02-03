@@ -116,7 +116,7 @@
 function tweetVote() {
   if (vote <=5 ){
     vote++
-    console.log(vote);
+    console.log(vote); 
   } else {
     winner++
     vote=0;
@@ -146,9 +146,6 @@ function newTweet(){
 var tweetData;
 var count = 0;
 
-
-
-
     $.ajax({
 url: "api/twitter",
 method: "GET"
@@ -158,8 +155,6 @@ method: "GET"
   var tweets = $('#tweet');
   tweets.append('<div>' + tweetData[count] +'</div>');
   });
-
-
 </script>
 
 </html>
