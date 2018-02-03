@@ -83,3 +83,8 @@ button{
    padding: 12px 0;
    width: 100%;
    border-radius: 0 0 2px 2px;
+}
+
+#tweet{
+   font-size:20px;
+}

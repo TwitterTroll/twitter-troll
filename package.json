@@ -1,18 +1,22 @@
 {
-  "name": "burger",
+  "name": "twitter troll",
   "version": "1.0.0",
-  "description": "burger resturant application",
+  "description": "Twitter Troll Application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Jamal Patterson, Neil Rosenberger, John Carroll",
+  "author": "Jamal Patterson,Neal Rosenberger, John Carroll",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "exact": "^0.8.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "jdom": "^2.0.3",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.6.2",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.1",
