@@ -4,7 +4,7 @@ var methodOverride = require('method-override');
 var bodyParser = require("body-parser"); 
 
 //Port settings
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 //App setup
 var app = express();
@@ -27,6 +27,8 @@ var routes = require("./controllers/html-routes.js");
 
 
 app.use(routes);
+
+
 
 var server = app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);

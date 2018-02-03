@@ -1,5 +1,5 @@
 //Make connection to websocket to frontend
-var socket = io.connect();
+var socket = io.connect('https://afternoon-garden-38906.herokuapp.com');
 
 // Query DOM
 var message = document.getElementById('message'),
@@ -16,6 +16,7 @@ btn.addEventListener('click', function(){
     });
     message.value = "";
 });
+//test
   
 message.addEventListener('keypress', function(){
     socket.emit('typing', handle.value);
