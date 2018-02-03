@@ -23,23 +23,8 @@ app.use(bodyParser.text());
 var routes = require("./controllers/html-routes.js");
 
 
-// var server = express()
-//   .use((req, res) => res.sendFile(INDEX) )
-//   .listen(PORT, () => console.log(`App now listening on ${ PORT }`));
 
-// var io = socketIO(server);
 
-// io.on('connection', (socket) => {
-//   console.log('Client connected');
-//   socket.on('disconnect', () => console.log('Client disconnected'));
-// });
-
-// var socket = io();
-// var el = document.getElementById('server-time');
-
-// socket.on('time', function(timeString) {
-//   el.innerHTML = 'Server time: ' + timeString;
-// });
 
 app.use(routes);
 
@@ -47,7 +32,7 @@ var server = app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
 });
 
- //Socket setup & pass server
+// Socket setup & pass server
 var io = socket(server);
 io.on('connection', function(socket) {
 
