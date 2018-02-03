@@ -16,7 +16,7 @@ btn.addEventListener('click', function(){
     });
     message.value = "";
 });
-//test
+// test it
   
 message.addEventListener('keypress', function(){
     socket.emit('typing', handle.value);
