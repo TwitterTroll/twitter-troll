@@ -95,7 +95,7 @@ button{
 }
 
 #tweet-container {
-    height:120px;
+    height:auto;
     padding: 30px auto;
 }
 
