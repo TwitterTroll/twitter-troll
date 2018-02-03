@@ -7,6 +7,10 @@
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
   <!-- Compiled and minified JavaScript -->
 </head>
@@ -34,10 +38,22 @@
           <p class="center-align"> I understand this website may contain adult language, and offensive behavior, and give consent to enter.</p>
        
           <br>
-          <button class="btn waves-effect waves-light #29b6f6 light-blue lighten-1" type="submit" name="action">Enter</button>
-          <br>
-  
-           
+          
+          <div class="row">
+          <div class="col s1 m1"></div>
+          <div class="col s3 m3">
+          <button class="btn waves-effect waves-light #29b6f6 light-blue lighten-1" type="submit" name="action">Enter Spectator</button>
+          </div>
+          <div class="col s3 m3">
+          <button class="btn waves-effect waves-light #29b6f6 light-blue lighten-1" type="submit" id="button1" name="action">Enter Troll 1</button>
+          </div>
+          <div class="col s3 m3">
+          <button class="btn waves-effect waves-light #29b6f6 light-blue lighten-1" type="submit" name="action">Enter Troll 2</button>
+          </div>
+          </div>
+          </div>
+
+
         </center>
       </div>
       <div class="right-align">
@@ -47,5 +63,12 @@
   </div>
   
 </body>
+<script type="text/javascript">
+
+  $('#button1').on("click",function() {
+  alert('vote1');
+  tweetVote(); 
+}); 
+</script>
 </html>
 
