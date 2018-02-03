@@ -1,5 +1,5 @@
 //Make connection to websocket to frontend
-var socket = io.connect('https://git.heroku.com/afternoon-garden-38906.git');
+var socket = io.connect();
 
 // Query DOM
 var message = document.getElementById('message'),
